@@ -10,6 +10,23 @@ class SurveyStartPage extends StatefulWidget {
 class _SurveyStartPageState extends State<SurveyStartPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Quiz start page'),
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Row(
+              children: const [
+                Expanded(
+                  child: Text('Basic Programming'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
