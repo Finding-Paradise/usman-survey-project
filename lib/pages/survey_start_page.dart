@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:usman_survey_app/pages/quiz_process_page.dart';
 
 class SurveyStartPage extends StatefulWidget {
   const SurveyStartPage({Key? key}) : super(key: key);
@@ -60,7 +61,13 @@ class _SurveyStartPageState extends State<SurveyStartPage> {
                             fontSize: 18, fontWeight: FontWeight.w600),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return const QuizProcessPage();
+                        },
+                      ));
+                    },
                     style: ButtonStyle(
                       padding: MaterialStateProperty.all<EdgeInsets>(
                         const EdgeInsets.symmetric(vertical: 28.0),
@@ -71,7 +78,7 @@ class _SurveyStartPageState extends State<SurveyStartPage> {
                         ),
                       ),
                       backgroundColor: MaterialStateProperty.all<Color>(
-                        const Color.fromARGB(255, 254, 122, 61),
+                        const Color.fromARGB(255, 254, 121, 61),
                       ),
                       foregroundColor: MaterialStateProperty.all(Colors.white),
                     ),
@@ -83,13 +90,6 @@ class _SurveyStartPageState extends State<SurveyStartPage> {
           ],
           mainAxisAlignment: MainAxisAlignment.spaceAround,
         ),
-      ),
-      bottomNavigationBar: const BottomAppBar(
-        color: Colors.blue,
-      ),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
-        child: Icon(Icons.add),
       ),
     );
   }
